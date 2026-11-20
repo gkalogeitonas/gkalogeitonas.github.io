@@ -13,12 +13,7 @@
                             {{ $entry['degree'] }}
                         @endisset
                     </h3>
-                    <p class="text-zinc-500">
-                        {{ $entry['school'] }}
-                        @isset($entry['grade'])
-                            · <span class="font-mono text-amber-700 dark:text-amber-400">{{ __('cv.grade') }} {{ $entry['grade'] }}</span>
-                        @endisset
-                    </p>
+                    <p class="text-zinc-500">{{ $entry['school'] }}</p>
                     @isset($entry['thesis'])
                         <x-cv.thesis :thesis="$entry['thesis']" />
                     @endisset

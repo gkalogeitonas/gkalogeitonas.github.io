@@ -42,12 +42,10 @@ it('renders every section of the content file', function (string $locale, string
 it('shows the MSc thesis with its public repositories', function () {
     $this->get('/')
         ->assertSee('Design and Implementation of a Smart Agriculture Platform with IoT Node Integration')
-        ->assertSee('grade 8.8 / 10')
         ->assertSee('https://github.com/gkalogeitonas/agronos', false);
 
     $this->get('/el')
-        ->assertSee('Σχεδιασμός και Υλοποίηση Πλατφόρμας Έξυπνης Γεωργίας με Ενσωμάτωση IoT Κόμβων')
-        ->assertSee('βαθμός 8,8 / 10');
+        ->assertSee('Σχεδιασμός και Υλοποίηση Πλατφόρμας Έξυπνης Γεωργίας με Ενσωμάτωση IoT Κόμβων');
 });
 
 it('does not expose contact details to scrapers', function (string $locale, string $path) {
@@ -68,3 +66,12 @@ it('links to the other language and marks the current one', function () {
         ->assertSee('<span aria-current="page" class="text-amber-700 dark:text-amber-400">el</span>', false)
         ->assertSee('href="'.url('/').'/" hreflang="en"', false);
 });
+
+it('leaves out grades and encryption claims', function (string $locale, string $path) {
+    $html = $this->get($path)->getContent();
+
+    expect($html)
+        ->not->toMatch('/\b8[.,]8\b/')
+        ->not->toContain('AES')
+        ->not->toContain('end-to-end');
+})->with('pages');

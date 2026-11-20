@@ -20,7 +20,7 @@ person:
 profile:
   - Full-stack developer με μεταπτυχιακό στα Συστήματα Κινητού και Διάχυτου Υπολογισμού και βασικές σπουδές στις Εφαρμοσμένες Μαθηματικές και Φυσικές Επιστήμες (ΕΜΠ).
   - "Από το 2013 αναπτύσσω και συντηρώ ηλεκτρονικά καταστήματα OpenCart στην EnterID Solutions: εξειδικευμένα extensions αποστολής, πληρωμής και analytics, αυτοματοποιημένους importers και feeds προϊόντων, καθώς και διασυνδέσεις με ελληνικά ERP όπως SoftOne, Galaxy, Entersoft και Pylon."
-  - Στη διπλωματική μου εργασία σχεδίασα και υλοποίησα το Agronos, μια πλατφόρμα Έξυπνης Γεωργίας σε Laravel + Vue, με κόμβους αισθητήρων ESP32 που επικοινωνούν μέσω WiFi και LoRa και end-to-end κρυπτογραφημένη τηλεμετρία.
+  - Στη διπλωματική μου εργασία σχεδίασα και υλοποίησα το Agronos, μια πλατφόρμα Έξυπνης Γεωργίας σε Laravel + Vue, με κόμβους αισθητήρων ESP32 που επικοινωνούν μέσω WiFi και LoRa.
 
 experience:
   - role: Full Stack Developer
@@ -52,12 +52,11 @@ education:
     school: Ελληνικό Ανοικτό Πανεπιστήμιο
     period: Οκτ 2021 — Οκτ 2026
     url: https://www.eap.gr/education/postgraduate/annual/mobile-and-pervasive-computing-systems/
-    grade: 8,8 / 10
     thesis:
       title: Σχεδιασμός και Υλοποίηση Πλατφόρμας Έξυπνης Γεωργίας με Ενσωμάτωση IoT Κόμβων
       name: Agronos
-      summary: Πολυενοικιακή (multi-tenant) πλατφόρμα στην οποία οι αγρότες εγκαθιστούν αισθητήρες και ενεργοποιητές στο πεδίο. Backend σε Laravel 12 με Vue SPA, σχεσιακά μεταδεδομένα σε MySQL και τηλεμετρία σε βάση χρονοσειρών (InfluxDB), ενημέρωση της διεπαφής σε πραγματικό χρόνο μέσω WebSockets (Laravel Reverb). Αρθρωτό υλικολογισμικό σε C++ για κόμβους ESP32 που μεταδίδουν μέσω WiFi (MQTT/HTTP) ή LoRa μεγάλης εμβέλειας, με end-to-end κρυπτογράφηση AES-128-CTR και μετρητές anti-replay, ώστε τα gateways να λειτουργούν ως «τυφλοί» αναμεταδότες.
-      stack: [Laravel 12, Vue, MySQL, InfluxDB, MQTT, Reverb, ESP32 / C++, LoRa, AES-128-CTR]
+      summary: Πολυενοικιακή (multi-tenant) πλατφόρμα στην οποία οι αγρότες εγκαθιστούν αισθητήρες και ενεργοποιητές στο πεδίο. Backend σε Laravel 12 με Vue SPA, σχεσιακά μεταδεδομένα σε MySQL και τηλεμετρία σε βάση χρονοσειρών (InfluxDB), ενημέρωση της διεπαφής σε πραγματικό χρόνο μέσω WebSockets (Laravel Reverb). Αρθρωτό υλικολογισμικό σε C++ για κόμβους ESP32 που μεταδίδουν μέσω WiFi (MQTT/HTTP) ή LoRa μεγάλης εμβέλειας.
+      stack: [Laravel 12, Vue, MySQL, InfluxDB, MQTT, Reverb, ESP32 / C++, LoRa]
       links:
         - label: Πλατφόρμα
           url: https://github.com/gkalogeitonas/agronos

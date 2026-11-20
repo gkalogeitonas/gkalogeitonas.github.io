@@ -19,6 +19,5 @@ return [
         'light' => 'Light',
     ],
     'thesis' => 'MSc thesis',
-    'grade' => 'grade',
     'photo_alt' => 'Photo of :name',
 ];

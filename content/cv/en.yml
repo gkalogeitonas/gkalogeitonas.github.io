@@ -21,7 +21,7 @@ person:
 profile:
   - Full-stack developer with an MSc in Pervasive and Mobile Computing Systems and a background in Applied Mathematics and Physics (NTUA).
   - "Since 2013 I build and maintain OpenCart e-commerce platforms at EnterID Solutions: custom shipping, payment and analytics extensions, automated product importers and feeds, and integrations with Greek ERPs such as SoftOne, Galaxy, Entersoft and Pylon."
-  - For my MSc thesis I designed and built Agronos, a Laravel + Vue platform for smart agriculture with ESP32 sensor nodes over WiFi and LoRa and end-to-end encrypted telemetry.
+  - For my MSc thesis I designed and built Agronos, a Laravel + Vue platform for smart agriculture with ESP32 sensor nodes reporting over WiFi and LoRa.
 
 experience:
   - role: Full Stack Developer
@@ -53,12 +53,11 @@ education:
     school: Hellenic Open University
     period: Oct 2021 — Oct 2026
     url: https://www.eap.gr/education/postgraduate/annual/mobile-and-pervasive-computing-systems/
-    grade: 8.8 / 10
     thesis:
       title: Design and Implementation of a Smart Agriculture Platform with IoT Node Integration
       name: Agronos
-      summary: A multi-tenant platform where farmers deploy sensors and actuators in the field. Laravel 12 backend with a Vue SPA, relational metadata in MySQL and telemetry in InfluxDB, real-time UI updates over WebSockets (Laravel Reverb). Modular C++ firmware for ESP32 nodes reporting over WiFi (MQTT/HTTP) or long-range LoRa, with end-to-end AES-128-CTR encryption and anti-replay counters so gateways act as blind forwarders.
-      stack: [Laravel 12, Vue, MySQL, InfluxDB, MQTT, Reverb, ESP32 / C++, LoRa, AES-128-CTR]
+      summary: A multi-tenant platform where farmers deploy sensors and actuators in the field. Laravel 12 backend with a Vue SPA, relational metadata in MySQL and telemetry in InfluxDB, real-time UI updates over WebSockets (Laravel Reverb). Modular C++ firmware for ESP32 nodes reporting over WiFi (MQTT/HTTP) or long-range LoRa.
+      stack: [Laravel 12, Vue, MySQL, InfluxDB, MQTT, Reverb, ESP32 / C++, LoRa]
       links:
         - label: Platform
           url: https://github.com/gkalogeitonas/agronos
