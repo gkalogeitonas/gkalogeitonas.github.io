@@ -69,6 +69,8 @@ education:
   - degree: Embedded System Design and Microcontroller Applications for the Internet of Things
     school: Hellenic Open University
     period: Oct 2020 — Jul 2021
+    # Not a degree: shown under the school so it isn't mistaken for one.
+    note: Postgraduate Training Certificate · 20 ECTS
 
   - degree: Integrated Master, Applied Mathematics and Physics
     school: National Technical University of Athens (NTUA)

@@ -67,6 +67,11 @@ it('links to the other language and marks the current one', function () {
         ->assertSee('href="'.url('/').'/" hreflang="en"', false);
 });
 
+it('marks the short programme as a training certificate, not a degree', function () {
+    $this->get('/')->assertSee('Postgraduate Training Certificate · 20 ECTS');
+    $this->get('/el')->assertSee('Πιστοποιητικό Μεταπτυχιακής Επιμόρφωσης · 20 ECTS');
+});
+
 it('leaves out grades and encryption claims', function (string $locale, string $path) {
     $html = $this->get($path)->getContent();
 

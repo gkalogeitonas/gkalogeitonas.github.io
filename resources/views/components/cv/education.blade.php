@@ -14,6 +14,9 @@
                         @endisset
                     </h3>
                     <p class="text-zinc-500">{{ $entry['school'] }}</p>
+                    @isset($entry['note'])
+                        <p class="font-mono text-xs text-amber-700 dark:text-amber-400">{{ $entry['note'] }}</p>
+                    @endisset
                     @isset($entry['thesis'])
                         <x-cv.thesis :thesis="$entry['thesis']" />
                     @endisset
