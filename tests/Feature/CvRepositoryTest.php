@@ -3,7 +3,7 @@
 use App\Cv\CvRepository;
 
 it('lists the locales that have content', function () {
-    expect(app(CvRepository::class)->locales())->toContain('en');
+    expect(app(CvRepository::class)->locales())->toEqualCanonicalizing(['en', 'el']);
 });
 
 it('rejects a locale without content', function () {

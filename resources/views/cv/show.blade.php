@@ -1,8 +1,11 @@
-<x-layouts.app :title="$cv['meta']['title']" :description="$cv['meta']['description']">
+<x-layouts.app :cv="$cv" :locale="$locale" :locales="$locales">
     <header class="border-b border-zinc-300 dark:border-zinc-800">
         <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-3 font-mono text-xs text-zinc-500">
             <span>~/gkalogeitonas</span>
-            <x-cv.theme-toggle />
+            <div class="flex items-center gap-5">
+                <x-cv.language-switch :locale="$locale" :locales="$locales" />
+                <x-cv.theme-toggle />
+            </div>
         </div>
     </header>
 

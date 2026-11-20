@@ -10,6 +10,7 @@ return [
         'languages' => 'languages',
         'certifications' => 'certifications',
     ],
+    'language' => 'Language',
     'email_me' => 'Email me',
     'email_noscript' => 'Enable JavaScript to see my email, or reach me on LinkedIn.',
     'theme' => [

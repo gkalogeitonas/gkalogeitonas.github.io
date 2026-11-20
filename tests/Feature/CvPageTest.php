@@ -4,18 +4,26 @@ use App\Cv\CvRepository;
 
 beforeEach(fn () => $this->withoutVite());
 
-it('renders the CV home page', function () {
-    $this->get('/')
+dataset('pages', [
+    'english' => ['en', '/'],
+    'greek' => ['el', '/el'],
+]);
+
+it('renders the CV in each language', function (string $locale, string $path) {
+    $cv = app(CvRepository::class)->for($locale);
+
+    $this->get($path)
         ->assertOk()
-        ->assertSee('<html lang="en">', false)
-        ->assertSee('Georgios Kalogeitonas')
-        ->assertSee('Full Stack Developer — e-commerce, ERP integrations &amp; IoT.', false);
-});
+        ->assertSee('<html lang="'.$locale.'">', false)
+        ->assertSee($cv['person']['name'])
+        ->assertSee(e($cv['person']['headline']), false)
+        ->assertSee(__('cv.sections.experience', locale: $locale));
+})->with('pages');
 
-it('renders every section of the content file', function () {
-    $cv = app(CvRepository::class)->for('en');
+it('renders every section of the content file', function (string $locale, string $path) {
+    $cv = app(CvRepository::class)->for($locale);
 
-    $response = $this->get('/');
+    $response = $this->get($path);
 
     foreach ($cv['experience'] as $job) {
         $response->assertSee($job['role'])->assertSee($job['company']);
@@ -29,27 +37,34 @@ it('renders every section of the content file', function () {
     foreach (collect($cv['skills'])->pluck('items')->flatten() as $skill) {
         $response->assertSee($skill);
     }
-});
+})->with('pages');
 
 it('shows the MSc thesis with its public repositories', function () {
     $this->get('/')
         ->assertSee('Design and Implementation of a Smart Agriculture Platform with IoT Node Integration')
         ->assertSee('grade 8.8 / 10')
-        ->assertSee('https://github.com/gkalogeitonas/agronos', false)
-        ->assertSee('https://github.com/gkalogeitonas/Agronos-iot-device', false);
+        ->assertSee('https://github.com/gkalogeitonas/agronos', false);
+
+    $this->get('/el')
+        ->assertSee('Σχεδιασμός και Υλοποίηση Πλατφόρμας Έξυπνης Γεωργίας με Ενσωμάτωση IoT Κόμβων')
+        ->assertSee('βαθμός 8,8 / 10');
 });
 
-it('does not expose contact details to scrapers', function () {
-    $html = $this->get('/')->getContent();
+it('does not expose contact details to scrapers', function (string $locale, string $path) {
+    $html = $this->get($path)->getContent();
 
     expect($html)
         ->not->toContain('gkalog2@gmail.com')
         ->not->toMatch('/\b69[0-9]{8}\b/') // no Greek mobile number
         ->toContain('data-email="'.strrev('gkalog2@gmail.com').'"');
-});
+})->with('pages');
 
-it('sets title and meta description from the content file', function () {
+it('links to the other language and marks the current one', function () {
     $this->get('/')
-        ->assertSee('<title>Georgios Kalogeitonas — Full Stack Developer</title>', false)
-        ->assertSee('<meta name="description" content="Full-stack developer (PHP, Laravel, Vue)', false);
+        ->assertSee('<span aria-current="page" class="text-amber-700 dark:text-amber-400">en</span>', false)
+        ->assertSee('href="'.url('/el').'/" hreflang="el"', false);
+
+    $this->get('/el')
+        ->assertSee('<span aria-current="page" class="text-amber-700 dark:text-amber-400">el</span>', false)
+        ->assertSee('href="'.url('/').'/" hreflang="en"', false);
 });

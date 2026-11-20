@@ -1,0 +1,126 @@
+# CV content (Greek). Same structure as en.yml; tests enforce it.
+# Technology names, certification titles and company names stay as in English.
+
+meta:
+  title: Γεώργιος Καλογείτονας — Full Stack Developer
+  description: Full-stack developer (PHP, Laravel, Vue) με εμπειρία σε ηλεκτρονικά καταστήματα, διασυνδέσεις ERP και συστήματα IoT. MSc στα Συστήματα Κινητού και Διάχυτου Υπολογισμού.
+
+person:
+  name: Γεώργιος Καλογείτονας
+  headline: Full Stack Developer — e-commerce, διασυνδέσεις ERP & IoT.
+  location: Αθήνα
+  avatar: images/profile.jpeg
+  email:
+    user: gkalog2
+    domain: gmail.com
+  links:
+    github: https://github.com/gkalogeitonas
+    linkedin: https://www.linkedin.com/in/georgios-kalogeitonas/
+
+profile:
+  - Full-stack developer με μεταπτυχιακό στα Συστήματα Κινητού και Διάχυτου Υπολογισμού και βασικές σπουδές στις Εφαρμοσμένες Μαθηματικές και Φυσικές Επιστήμες (ΕΜΠ).
+  - "Από το 2013 αναπτύσσω και συντηρώ ηλεκτρονικά καταστήματα OpenCart στην EnterID Solutions: εξειδικευμένα extensions αποστολής, πληρωμής και analytics, αυτοματοποιημένους importers και feeds προϊόντων, καθώς και διασυνδέσεις με ελληνικά ERP όπως SoftOne, Galaxy, Entersoft και Pylon."
+  - Στη διπλωματική μου εργασία σχεδίασα και υλοποίησα το Agronos, μια πλατφόρμα Έξυπνης Γεωργίας σε Laravel + Vue, με κόμβους αισθητήρων ESP32 που επικοινωνούν μέσω WiFi και LoRa και end-to-end κρυπτογραφημένη τηλεμετρία.
+
+experience:
+  - role: Full Stack Developer
+    company: EnterID Solutions
+    period: 2013 — Σήμερα
+    points:
+      - Κατασκευή, συντήρηση και επέκταση ηλεκτρονικών καταστημάτων στην πλατφόρμα OpenCart (όλες οι εκδόσεις).
+      - "Διασυνδέσεις του OpenCart με τα πιο διαδεδομένα ελληνικά ERP: SoftOne, Galaxy, Entersoft και Pylon."
+      - Ανάπτυξη εξειδικευμένων extensions αποστολής, πληρωμής, analytics κ.ά. για τους πελάτες μας.
+      - Αυτοματοποιημένοι importers προϊόντων από feeds προμηθευτών (XML ή JSON).
+      - Feeds προϊόντων για πλατφόρμες σύγκρισης τιμών.
+      - Ανάπτυξη ιστοσελίδων σε Drupal (7.x και 8.x).
+      - Ανάπτυξη web εφαρμογών με PHP, SQL και JavaScript.
+
+  - role: Web Developer
+    company: Ελεύθερος επαγγελματίας
+    period: 2008 — 2014
+    points:
+      - Ιδιωτικά projects με PHP και MySQL, στατικές ιστοσελίδες ως freelance εργασίες και ιστοσελίδες Drupal ως εξωτερικός συνεργάτης άλλων εταιρειών.
+
+  - role: Καθηγητής Μαθηματικών
+    # TODO(verify): "2nd High School of Naxos" — Γυμνάσιο ή Λύκειο;
+    company: 2ο Γυμνάσιο Νάξου
+    period: Απρ 2013 — Ιούν 2013
+    points:
+      - Διδασκαλία Μαθηματικών στο 2ο Γυμνάσιο Νάξου.
+
+education:
+  - degree: Μεταπτυχιακό (MSc), Συστήματα Κινητού και Διάχυτου Υπολογισμού
+    school: Ελληνικό Ανοικτό Πανεπιστήμιο
+    period: Οκτ 2021 — Οκτ 2025
+    url: https://www.eap.gr/education/postgraduate/annual/mobile-and-pervasive-computing-systems/
+    grade: 8,8 / 10
+    thesis:
+      title: Σχεδιασμός και Υλοποίηση Πλατφόρμας Έξυπνης Γεωργίας με Ενσωμάτωση IoT Κόμβων
+      name: Agronos
+      summary: Πολυενοικιακή (multi-tenant) πλατφόρμα στην οποία οι αγρότες εγκαθιστούν αισθητήρες και ενεργοποιητές στο πεδίο. Backend σε Laravel 12 με Vue SPA, σχεσιακά μεταδεδομένα σε MySQL και τηλεμετρία σε βάση χρονοσειρών (InfluxDB), ενημέρωση της διεπαφής σε πραγματικό χρόνο μέσω WebSockets (Laravel Reverb). Αρθρωτό υλικολογισμικό σε C++ για κόμβους ESP32 που μεταδίδουν μέσω WiFi (MQTT/HTTP) ή LoRa μεγάλης εμβέλειας, με end-to-end κρυπτογράφηση AES-128-CTR και μετρητές anti-replay, ώστε τα gateways να λειτουργούν ως «τυφλοί» αναμεταδότες.
+      stack: [Laravel 12, Vue, MySQL, InfluxDB, MQTT, Reverb, ESP32 / C++, LoRa, AES-128-CTR]
+      links:
+        - label: Πλατφόρμα
+          url: https://github.com/gkalogeitonas/agronos
+        - label: Υλικολογισμικό συσκευής IoT
+          url: https://github.com/gkalogeitonas/Agronos-iot-device
+        - label: ESP32 LoRa gateway
+          url: https://github.com/gkalogeitonas/ESP32-LoRa-to-Internet-Gateway
+
+  - degree: Σχεδίαση Ενσωματωμένων Συστημάτων και Εφαρμογές Μικροελεγκτών για το Διαδίκτυο των Πραγμάτων
+    school: Ελληνικό Ανοικτό Πανεπιστήμιο
+    period: Οκτ 2020 — Ιούλ 2021
+
+  - degree: Δίπλωμα (Integrated Master), Εφαρμοσμένες Μαθηματικές και Φυσικές Επιστήμες
+    school: Εθνικό Μετσόβιο Πολυτεχνείο (ΕΜΠ)
+    period: 2002 — 2010
+
+skills:
+  - group: Backend
+    items: [PHP, Laravel, MySQL, InfluxDB, Διασυνδέσεις ERP]
+  - group: Frontend
+    items: [JavaScript, Vue, jQuery, HTML, CSS]
+  - group: IoT
+    items: [C++ (ESP32), MQTT, LoRa, WebSockets]
+  - group: Πλατφόρμες & εργαλεία
+    items: [OpenCart, Drupal, Git]
+
+beyond:
+  text: Στον ελεύθερο χρόνο μου φτιάχνω projects physical computing και IoT με μικροελεγκτές όπως ATmega, STM32, ESP8266 και ESP32. Μου αρέσει επίσης να δίνω μορφή σε ιδέες με προσθετική (3D εκτύπωση) και αφαιρετική κατασκευή (CNC).
+  tags: [IoT, ESP32, STM32, ATmega, 3D εκτύπωση, CNC]
+
+languages:
+  - name: Ελληνικά
+    level: Μητρική
+  - name: Αγγλικά
+    level: Επαγγελματικό επίπεδο
+
+certifications:
+  - name: TensorFlow Developer
+    issuer: DeepLearning.AI
+    year: 2022
+    url: https://www.coursera.org/account/accomplishments/specialization/DQWHAU6934K6
+  - name: Getting Started with Go
+    issuer: Coursera
+    year: 2022
+    url: https://www.coursera.org/account/accomplishments/certificate/HH43L2SXXBE4
+  - name: Git Branches, Merges, and Remotes
+    issuer: LinkedIn Learning
+    year: 2022
+    url: https://www.linkedin.com/learning/certificates/450cde6485acf5a8f8b3be89e45a36cfdabeae57f3756c3601992eaf73c3ef63
+  - name: Git Intermediate Techniques
+    issuer: LinkedIn Learning
+    year: 2022
+    url: https://www.linkedin.com/learning/certificates/3d16df3e26c1bfca53641b71a2d83030ed28a57664b63eca945556865a16a98e
+  - name: Deep Learning Specialization
+    issuer: DeepLearning.AI
+    year: 2019
+    url: https://www.coursera.org/account/accomplishments/specialization/E224TWEJ6HQE
+  - name: Machine Learning
+    issuer: Coursera
+    year: 2019
+    url: https://www.coursera.org/account/accomplishments/verify/QTVWBB2R8NCN
+  - name: Git Essential Training
+    issuer: LinkedIn Learning
+    year: 2019
+    url: https://www.linkedin.com/learning/certificates/4f3981337fe9446a4056466b58b1766fb5dfc3e83b77968b4bbe394029edcc81
