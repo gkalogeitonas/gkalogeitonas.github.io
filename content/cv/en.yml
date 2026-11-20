@@ -28,13 +28,11 @@ experience:
     company: EnterID Solutions
     period: 2013 — Present
     points:
-      - Construction, maintenance, and expansion of online stores based on OpenCart, versions 1.5 to 4.x.
-      - "Building interconnections between OpenCart and the most popular Greek ERPs: SoftOne, Galaxy, Entersoft and Pylon."
-      - Building tailor-made shipping, payment, analytics, and other extensions for our clients.
-      - Building automated product importers from manufacturer feeds (XML or JSON).
-      - Building product feeds for e-commerce price comparison platforms.
-      - Website development on Drupal 7.
-      - Building web applications with PHP, SQL, and JavaScript.
+      - Built, maintained and extended 50+ client stores on OpenCart, versions 1.5 to 3.x.
+      - Designed an in-house importer framework (feed retrieval, parsing, admin-configurable field mapping) now behind 50+ supplier importers across 10+ stores.
+      - "Integrated OpenCart with Greek ERPs: SoftOne, Galaxy and Entersoft."
+      - "Built 100+ custom OpenCart extensions and modifications: shipping, payment, receipts and invoices, and discounts."
+      - Built and maintained Drupal 7 websites, including regional news portals.
 
   - role: Web Developer
     company: Self-employed
