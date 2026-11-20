@@ -3,12 +3,16 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.3",
         "laravel/framework": "^13.17",
         "laravel/tinker": "^3.0",
+        "spatie/laravel-export": "^1.6",
         "symfony/yaml": "^8.1"
     },
     "require-dev": {
@@ -68,6 +72,10 @@
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+        ],
+        "export": [
+            "Composer\\Config::disableProcessTimeout",
+            "APP_ENV=production APP_DEBUG=false APP_URL=${SITE_URL:-https://gkalogeitonas.github.io} php artisan export"
         ]
     },
     "extra": {
@@ -85,5 +93,8 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts-descriptions": {
+        "export": "Export the static site to dist/ with production settings"
+    }
 }

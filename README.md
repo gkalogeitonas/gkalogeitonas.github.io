@@ -23,7 +23,24 @@ ddev npm run dev        # Vite with hot reload → https://gkalogeitonas-cv.ddev
 ddev exec vendor/bin/pest
 ```
 
-PHP version is set in `.ddev/config.yaml` (`php_version`).
+PHP version is set in `.ddev/config.yaml` (`php_version`); CI reads it from there.
+
+## Build the static site and PDFs
+
+```sh
+ddev npm run build
+ddev composer export    # dist/ with production settings (APP_URL=https://gkalogeitonas.github.io)
+npm run pdf             # dist/cv-en.pdf, dist/cv-el.pdf (headless Chromium, on the host)
+npm run check:dist      # sanity checks: files present, no dev-only URLs, no plain email
+```
+
+`npm run pdf` needs Chromium once: `npx playwright install chromium`. It answers requests to
+the production URL from `dist/`, so PDFs can be rendered before anything is deployed.
+
+## Deploy
+
+Every push to `main` runs `.github/workflows/deploy.yml`: build → Pest → export → PDFs →
+checks → GitHub Pages. Pull requests run the same build without deploying.
 
 ## Link preview image
 

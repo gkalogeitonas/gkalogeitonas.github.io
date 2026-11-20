@@ -18,3 +18,23 @@ html {
 summary::-webkit-details-marker {
     display: none;
 }
+
+/* Print / PDF: A4, denser type (Tailwind sizes are rem-based), light theme (see app.js). */
+@page {
+    size: A4;
+    margin: 12mm 14mm;
+}
+
+@media print {
+    html {
+        font-size: 11px;
+    }
+}
+
+/* Show collapsed <details> content on paper where supported; app.js also opens them. */
+@media print {
+    details::details-content {
+        content-visibility: visible;
+        display: block;
+    }
+}

@@ -1,5 +1,5 @@
 @props(['thesis'])
-<article class="mt-4 rounded-xl border border-amber-500/40 bg-white p-6 dark:bg-zinc-900">
+<article class="mt-4 rounded-xl border border-amber-500/40 bg-white p-6 print:break-inside-avoid print:p-4 dark:bg-zinc-900">
     <p class="font-mono text-xs text-amber-700 dark:text-amber-400">{{ __('cv.thesis') }}</p>
     <h4 class="mt-1 font-semibold text-zinc-900 dark:text-white">{{ $thesis['title'] }}</h4>
     <p class="mt-3 leading-relaxed">

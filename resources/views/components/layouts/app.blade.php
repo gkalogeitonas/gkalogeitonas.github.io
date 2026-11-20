@@ -44,7 +44,7 @@
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-screen bg-zinc-100 font-sans text-zinc-700 antialiased dark:bg-zinc-950 dark:text-zinc-300">
+<body class="min-h-screen bg-zinc-100 font-sans text-zinc-700 antialiased print:min-h-0 print:bg-white dark:bg-zinc-950 dark:text-zinc-300">
     {{ $slot }}
 </body>
 </html>

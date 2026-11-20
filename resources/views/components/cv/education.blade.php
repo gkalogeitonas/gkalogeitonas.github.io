@@ -1,9 +1,9 @@
 @props(['items'])
-<section class="py-10">
+<section class="py-10 print:py-4">
     <x-cv.heading id="education">{{ __('cv.sections.education') }}</x-cv.heading>
     <div class="space-y-6">
         @foreach ($items as $entry)
-            <div class="grid gap-1 md:grid-cols-[11rem_1fr]">
+            <div class="grid gap-1 md:grid-cols-[11rem_1fr] print:grid-cols-[11rem_1fr] print:gap-4">
                 <span class="font-mono text-sm text-zinc-500">{{ $entry['period'] }}</span>
                 <div>
                     <h3 class="font-semibold text-zinc-900 dark:text-white">

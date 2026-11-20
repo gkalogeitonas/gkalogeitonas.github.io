@@ -6,6 +6,8 @@
 - Views: `resources/views/cv/show.blade.php` composes anonymous components in `resources/views/components/cv/`.
 - The site is exported to static HTML for GitHub Pages: no server-side behaviour at request time (no forms, sessions, or query-string logic).
 - Laravel Boost: the MCP server runs inside ddev (`.mcp.json` → `ddev exec php artisan boost:mcp`). Where the Boost guidelines below say `php artisan …` or `vendor/bin/…`, prefix with `ddev exec`. After `ddev artisan boost:update`, check `.mcp.json` still uses ddev.
+- Static export: `ddev composer export` → `npm run pdf` (host) → `npm run check:dist`. New pages must be added to `config/export.php` `paths` (crawling is off).
+- Print/PDF layout uses `print:` variants; A4 is narrower than `md`, so any `md:` layout needs a `print:` twin.
 - Privacy: never render the phone number; the email is only emitted reversed in `data-email` and assembled by `resources/js/app.js`.
 
 ===
