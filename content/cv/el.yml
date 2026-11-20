@@ -116,7 +116,7 @@ languages:
   - name: Ελληνικά
     level: Μητρική
   - name: Αγγλικά
-    level: Επαγγελματικό επίπεδο
+    level: Καλό επίπεδο (B2) · Michigan Lower (ECCE)
 
 certifications:
   - name: TensorFlow Developer
