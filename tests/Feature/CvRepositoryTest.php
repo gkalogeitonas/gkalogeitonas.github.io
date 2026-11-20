@@ -17,13 +17,16 @@ it('rejects path traversal in the locale', function () {
 it('has the required structure in every locale file', function (string $locale) {
     $cv = app(CvRepository::class)->for($locale);
 
-    expect($cv)->toHaveKeys(['meta', 'person', 'profile', 'experience', 'education', 'skills', 'beyond', 'languages', 'certifications'])
+    expect($cv)->toHaveKeys(['meta', 'person', 'profile', 'experience', 'projects', 'education', 'skills', 'beyond', 'languages', 'certifications'])
         ->and($cv['meta'])->toHaveKeys(['title', 'description'])
         ->and($cv['person'])->toHaveKeys(['name', 'headline', 'avatar', 'email.user', 'email.domain', 'links'])
         ->and(public_path($cv['person']['avatar']))->toBeFile();
 
     foreach ($cv['experience'] as $job) {
         expect($job)->toHaveKeys(['role', 'company', 'period', 'points']);
+    }
+    foreach ($cv['projects'] as $project) {
+        expect($project)->toHaveKeys(['name', 'context', 'period', 'summary', 'stack']);
     }
     foreach ($cv['education'] as $entry) {
         expect($entry)->toHaveKeys(['degree', 'school', 'period']);

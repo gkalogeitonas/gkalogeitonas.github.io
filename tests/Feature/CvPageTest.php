@@ -28,6 +28,9 @@ it('renders every section of the content file', function (string $locale, string
     foreach ($cv['experience'] as $job) {
         $response->assertSee($job['role'])->assertSee($job['company']);
     }
+    foreach ($cv['projects'] as $project) {
+        $response->assertSee($project['name'])->assertSee(e($project['summary']), false);
+    }
     foreach ($cv['education'] as $entry) {
         $response->assertSee($entry['degree']);
     }
@@ -39,14 +42,22 @@ it('renders every section of the content file', function (string $locale, string
     }
 })->with('pages');
 
-it('shows the MSc thesis with its public repositories', function () {
+it('shows the MSc thesis and points to its project', function () {
     $this->get('/')
         ->assertSee('Design and Implementation of a Smart Agriculture Platform with IoT Node Integration')
+        ->assertSee('href="#agronos"', false)
+        ->assertSee('id="agronos"', false)
         ->assertSee('https://github.com/gkalogeitonas/agronos', false);
 
     $this->get('/el')
         ->assertSee('Σχεδιασμός και Υλοποίηση Πλατφόρμας Έξυπνης Γεωργίας με Ενσωμάτωση IoT Κόμβων');
 });
+
+it('links the public projects to their repositories', function (string $locale, string $path) {
+    $this->get($path)
+        ->assertSee(__('cv.sections.projects', locale: $locale))
+        ->assertSee('href="https://github.com/gkalogeitonas/laraPMS"', false);
+})->with('pages');
 
 it('does not expose contact details to scrapers', function (string $locale, string $path) {
     $html = $this->get($path)->getContent();

@@ -13,6 +13,7 @@
     <main class="mx-auto max-w-5xl px-6 pb-24 print:max-w-none print:px-0 print:pb-0">
         <x-cv.hero :person="$cv['person']" :profile="$cv['profile']" :site-url="$locales->url($locale)" />
         <x-cv.experience :items="$cv['experience']" />
+        <x-cv.projects :items="$cv['projects']" />
         <x-cv.education :items="$cv['education']" />
 
         <div class="grid gap-10 py-10 md:grid-cols-2 print:grid-cols-2 print:py-4">

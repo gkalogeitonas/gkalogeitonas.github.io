@@ -4,6 +4,7 @@
 return [
     'sections' => [
         'experience' => 'εμπειρία',
+        'projects' => 'projects',
         'education' => 'εκπαίδευση',
         'stack' => 'τεχνολογίες',
         'beyond' => 'εκτός-κώδικα',
@@ -19,5 +20,6 @@ return [
         'light' => 'Φωτεινό',
     ],
     'thesis' => 'Διπλωματική εργασία',
+    'thesis_project' => 'Υλοποιήθηκε ως :name, δείτε στα projects',
     'photo_alt' => 'Φωτογραφία: :name',
 ];

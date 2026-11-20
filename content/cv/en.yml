@@ -3,7 +3,7 @@
 
 meta:
   title: Georgios Kalogeitonas — Full Stack Developer
-  description: Full-stack developer (PHP, Laravel, Vue) building e-commerce platforms, ERP integrations and IoT systems. MSc in Pervasive and Mobile Computing Systems.
+  description: Full-stack developer (PHP, OpenCart, Laravel, Vue) building e-commerce platforms, ERP integrations and IoT systems. MSc in Pervasive and Mobile Computing Systems.
 
 person:
   name: Georgios Kalogeitonas
@@ -20,33 +20,68 @@ person:
 
 profile:
   - Full-stack developer with an MSc in Pervasive and Mobile Computing Systems and a background in Applied Mathematics and Physics (NTUA).
-  - "Since 2013 I build and maintain OpenCart e-commerce platforms at EnterID Solutions: custom shipping, payment and analytics extensions, automated product importers and feeds, and integrations with Greek ERPs such as SoftOne, Galaxy, Entersoft and Pylon."
-  - For my MSc thesis I designed and built Agronos, a Laravel + Vue platform for smart agriculture with ESP32 sensor nodes reporting over WiFi and LoRa.
+  - Since 2013 I have been building and maintaining OpenCart e-commerce platforms at EnterID Solutions, connecting them to Greek ERPs and supplier feeds. More recently I also build Laravel + Vue applications, including an AI service that writes product content for online stores.
+  - For my MSc thesis I designed and built Agronos, a Laravel + Vue platform for smart agriculture with ESP32 sensor nodes reporting over WiFi and LoRa, and I keep developing it.
 
 experience:
   - role: Full Stack Developer
     company: EnterID Solutions
     period: 2013 — Present
     points:
-      - Construction, maintenance, and expansion of online stores based on the OpenCart platform (all versions).
+      - Construction, maintenance, and expansion of online stores based on OpenCart, versions 1.5 to 4.x.
       - "Building interconnections between OpenCart and the most popular Greek ERPs: SoftOne, Galaxy, Entersoft and Pylon."
       - Building tailor-made shipping, payment, analytics, and other extensions for our clients.
       - Building automated product importers from manufacturer feeds (XML or JSON).
-      - Building product feeds for eCommerce aggregators.
+      - Building product feeds for e-commerce price comparison platforms.
       - Website development on Drupal 7.
       - Building web applications with PHP, SQL, and JavaScript.
 
   - role: Web Developer
-    company: Freelancer
+    company: Self-employed
     period: 2008 — 2014
     points:
-      - Built various private projects with PHP and MySQL, static sites as freelance jobs, and Drupal websites as an outsourcing partner to other companies.
+      - Built PHP and MySQL web applications and static websites for private clients, and Drupal websites as an outsourcing partner to other companies.
 
-  - role: High School Teacher
-    company: 2nd High School of Naxos
+  - role: Mathematics Teacher
+    company: 2nd Junior High School of Naxos
     period: Apr 2013 — Jun 2013
     points:
-      - Teaching Mathematics at the 2nd High School of Naxos, Greece.
+      - Taught Mathematics to lower secondary students.
+
+projects:
+  - name: Agronos
+    context: MSc thesis, actively developed
+    period: 2025 — Present
+    summary: Multi-tenant smart agriculture platform. Farmers organise their farms into zones, record crop plantings and deploy ESP32 sensor nodes that report over WiFi or, through a custom gateway, long-range LoRa. Readings flow through an EMQX MQTT broker with per-user access rules into InfluxDB, the Vue UI updates live over WebSockets (Laravel Reverb), and offline devices or low batteries raise alerts. The ESP32 firmware is modular C++ with captive-portal WiFi setup and deep sleep. Tested with Pest feature and browser tests.
+    stack: [Laravel 13, Vue, Inertia, MariaDB, InfluxDB, MQTT (EMQX), Reverb, ESP32 / C++, LoRa, Pest]
+    links:
+      - label: Platform
+        url: https://github.com/gkalogeitonas/agronos
+      - label: IoT device firmware
+        url: https://github.com/gkalogeitonas/Agronos-iot-device
+      - label: ESP32 LoRa gateway
+        url: https://github.com/gkalogeitonas/ESP32-LoRa-to-Internet-Gateway
+
+  - name: CartGPT
+    context: EnterID Solutions
+    period: 2025 — 2026
+    summary: AI service that enriches OpenCart product content. A companion OpenCart extension sends product data to a Laravel API, which generates improved, multilingual product descriptions through each user's own AI provider keys.
+    stack: [Laravel 12, Vue, Inertia, Prism, OpenAI, OpenCart]
+
+  - name: Citrus Manager
+    context: EnterID Solutions
+    period: "2026"
+    summary: Back-office application for a citrus trading business. It records customers, sales and deliveries, and payments, and shows each customer's balance computed live from them.
+    stack: [Laravel 13, Inertia, Vue, Docker]
+
+  - name: laraPMS
+    context: Personal project
+    period: 2024 — Present
+    summary: Multi-tenant property management system for properties, rooms and bookings, with a booking calendar, rescheduling, overbooking detection and payments.
+    stack: [Laravel 13, Inertia, Vue, Tailwind CSS, Pest]
+    links:
+      - label: GitHub
+        url: https://github.com/gkalogeitonas/laraPMS
 
 education:
   - degree: MSc, Pervasive and Mobile Computing Systems
@@ -56,15 +91,6 @@ education:
     thesis:
       title: Design and Implementation of a Smart Agriculture Platform with IoT Node Integration
       name: Agronos
-      summary: A multi-tenant platform where farmers deploy sensors and actuators in the field. Laravel 12 backend with a Vue SPA, relational metadata in MySQL and telemetry in InfluxDB, real-time UI updates over WebSockets (Laravel Reverb). Modular C++ firmware for ESP32 nodes reporting over WiFi (MQTT/HTTP) or long-range LoRa.
-      stack: [Laravel 12, Vue, MySQL, InfluxDB, MQTT, Reverb, ESP32 / C++, LoRa]
-      links:
-        - label: Platform
-          url: https://github.com/gkalogeitonas/agronos
-        - label: IoT device firmware
-          url: https://github.com/gkalogeitonas/Agronos-iot-device
-        - label: ESP32 LoRa gateway
-          url: https://github.com/gkalogeitonas/ESP32-LoRa-to-Internet-Gateway
 
   - degree: Embedded System Design and Microcontroller Applications for the Internet of Things
     school: Hellenic Open University
@@ -78,16 +104,16 @@ education:
 
 skills:
   - group: Backend
-    items: [PHP, Laravel, MySQL, InfluxDB, ERP integrations]
+    items: [PHP, Laravel, MySQL, InfluxDB, ERP integrations, "AI / LLM integration (OpenAI, Prism)"]
   - group: Frontend
-    items: [JavaScript, Vue, jQuery, HTML, CSS]
+    items: [JavaScript, Vue, Inertia, jQuery, HTML, CSS]
   - group: IoT
     items: [C++ (ESP32), MQTT, LoRa, WebSockets]
   - group: Platforms & tools
-    items: [OpenCart, Drupal, Git]
+    items: [OpenCart, Drupal, Git, Docker]
 
 beyond:
-  text: In my spare time I build physical computing and IoT projects with micro-controllers like ATmega, STM32, ESP8266 and ESP32. I also enjoy bringing ideas to life through additive (3D printing) and subtractive manufacturing.
+  text: In my spare time I build physical computing and IoT projects with microcontrollers like ATmega, STM32, ESP8266 and ESP32. I also enjoy bringing ideas to life through additive (3D printing) and subtractive manufacturing (CNC).
   tags: [IoT, ESP32, STM32, ATmega, 3D printing, CNC]
 
 languages:
@@ -102,26 +128,14 @@ certifications:
     year: 2022
     url: https://www.coursera.org/account/accomplishments/specialization/DQWHAU6934K6
   - name: Getting Started with Go
-    issuer: Coursera
+    issuer: UC Irvine
     year: 2022
     url: https://www.coursera.org/account/accomplishments/certificate/HH43L2SXXBE4
-  - name: Git Branches, Merges, and Remotes
-    issuer: LinkedIn Learning
-    year: 2022
-    url: https://www.linkedin.com/learning/certificates/450cde6485acf5a8f8b3be89e45a36cfdabeae57f3756c3601992eaf73c3ef63
-  - name: Git Intermediate Techniques
-    issuer: LinkedIn Learning
-    year: 2022
-    url: https://www.linkedin.com/learning/certificates/3d16df3e26c1bfca53641b71a2d83030ed28a57664b63eca945556865a16a98e
   - name: Deep Learning Specialization
     issuer: DeepLearning.AI
     year: 2019
     url: https://www.coursera.org/account/accomplishments/specialization/E224TWEJ6HQE
   - name: Machine Learning
-    issuer: Coursera
+    issuer: Stanford University
     year: 2019
     url: https://www.coursera.org/account/accomplishments/verify/QTVWBB2R8NCN
-  - name: Git Essential Training
-    issuer: LinkedIn Learning
-    year: 2019
-    url: https://www.linkedin.com/learning/certificates/4f3981337fe9446a4056466b58b1766fb5dfc3e83b77968b4bbe394029edcc81

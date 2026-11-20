@@ -4,6 +4,7 @@
 return [
     'sections' => [
         'experience' => 'experience',
+        'projects' => 'projects',
         'education' => 'education',
         'stack' => 'stack',
         'beyond' => 'beyond-code',
@@ -19,5 +20,6 @@ return [
         'light' => 'Light',
     ],
     'thesis' => 'MSc thesis',
+    'thesis_project' => 'Built as :name, see projects',
     'photo_alt' => 'Photo of :name',
 ];
