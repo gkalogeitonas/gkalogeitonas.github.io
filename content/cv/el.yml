@@ -42,7 +42,6 @@ experience:
       - Ιδιωτικά projects με PHP και MySQL, στατικές ιστοσελίδες ως freelance εργασίες και ιστοσελίδες Drupal ως εξωτερικός συνεργάτης άλλων εταιρειών.
 
   - role: Καθηγητής Μαθηματικών
-    # TODO(verify): "2nd High School of Naxos" — Γυμνάσιο ή Λύκειο;
     company: 2ο Γυμνάσιο Νάξου
     period: Απρ 2013 — Ιούν 2013
     points:
@@ -51,7 +50,7 @@ experience:
 education:
   - degree: Μεταπτυχιακό (MSc), Συστήματα Κινητού και Διάχυτου Υπολογισμού
     school: Ελληνικό Ανοικτό Πανεπιστήμιο
-    period: Οκτ 2021 — Οκτ 2025
+    period: Οκτ 2021 — Οκτ 2026
     url: https://www.eap.gr/education/postgraduate/annual/mobile-and-pervasive-computing-systems/
     grade: 8,8 / 10
     thesis:
