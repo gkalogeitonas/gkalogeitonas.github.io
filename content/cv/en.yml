@@ -1,0 +1,126 @@
+# CV content (English). One file per locale; keep the structure identical across locales.
+# Section headings and UI strings live in lang/<locale>/cv.php, not here.
+
+meta:
+  title: Georgios Kalogeitonas — Full Stack Developer
+  description: Full-stack developer (PHP, Laravel, Vue) building e-commerce platforms, ERP integrations and IoT systems. MSc in Pervasive and Mobile Computing Systems.
+
+person:
+  name: Georgios Kalogeitonas
+  headline: Full Stack Developer — e-commerce, ERP integrations & IoT.
+  location: Athens, Greece
+  avatar: images/profile.jpeg
+  # Split so the address never appears verbatim in the HTML; assembled in the browser.
+  email:
+    user: gkalog2
+    domain: gmail.com
+  links:
+    github: https://github.com/gkalogeitonas
+    linkedin: https://www.linkedin.com/in/georgios-kalogeitonas/
+
+profile:
+  - Full-stack developer with an MSc in Pervasive and Mobile Computing Systems and a background in Applied Mathematics and Physics (NTUA).
+  - "Since 2013 I build and maintain OpenCart e-commerce platforms at EnterID Solutions: custom shipping, payment and analytics extensions, automated product importers and feeds, and integrations with Greek ERPs such as SoftOne, Galaxy, Entersoft and Pylon."
+  - For my MSc thesis I designed and built Agronos, a Laravel + Vue platform for smart agriculture with ESP32 sensor nodes over WiFi and LoRa and end-to-end encrypted telemetry.
+
+experience:
+  - role: Full Stack Developer
+    company: EnterID Solutions
+    period: 2013 — Present
+    points:
+      - Construction, maintenance, and expansion of online stores based on the OpenCart platform (all versions).
+      - "Building interconnections between OpenCart and the most popular Greek ERPs: SoftOne, Galaxy, Entersoft and Pylon."
+      - Building tailor-made shipping, payment, analytics, and other extensions for our clients.
+      - Building automated product importers from manufacturer feeds (XML or JSON).
+      - Building product feeds for eCommerce aggregators.
+      - Website development on Drupal (7.x and 8.x).
+      - Building web applications with PHP, SQL, and JavaScript.
+
+  - role: Web Developer
+    company: Freelancer
+    period: 2008 — 2014
+    points:
+      - Built various private projects with PHP and MySQL, static sites as freelance jobs, and Drupal websites as an outsourcing partner to other companies.
+
+  - role: High School Teacher
+    company: 2nd High School of Naxos
+    period: Apr 2013 — Jun 2013
+    points:
+      - Teaching Mathematics at the 2nd High School of Naxos, Greece.
+
+education:
+  - degree: MSc, Pervasive and Mobile Computing Systems
+    school: Hellenic Open University
+    period: Oct 2021 — Oct 2025
+    url: https://www.eap.gr/education/postgraduate/annual/mobile-and-pervasive-computing-systems/
+    grade: 8.8 / 10
+    thesis:
+      title: Design and Implementation of a Smart Agriculture Platform with IoT Node Integration
+      name: Agronos
+      summary: A multi-tenant platform where farmers deploy sensors and actuators in the field. Laravel 12 backend with a Vue SPA, relational metadata in MySQL and telemetry in InfluxDB, real-time UI updates over WebSockets (Laravel Reverb). Modular C++ firmware for ESP32 nodes reporting over WiFi (MQTT/HTTP) or long-range LoRa, with end-to-end AES-128-CTR encryption and anti-replay counters so gateways act as blind forwarders.
+      stack: [Laravel 12, Vue, MySQL, InfluxDB, MQTT, Reverb, ESP32 / C++, LoRa, AES-128-CTR]
+      links:
+        - label: Platform
+          url: https://github.com/gkalogeitonas/agronos
+        - label: IoT device firmware
+          url: https://github.com/gkalogeitonas/Agronos-iot-device
+        - label: ESP32 LoRa gateway
+          url: https://github.com/gkalogeitonas/ESP32-LoRa-to-Internet-Gateway
+
+  - degree: Embedded System Design and Microcontroller Applications for the Internet of Things
+    school: Hellenic Open University
+    period: Oct 2020 — Jul 2021
+
+  - degree: Integrated Master, Applied Mathematics and Physics
+    school: National Technical University of Athens (NTUA)
+    period: 2002 — 2010
+
+skills:
+  - group: Backend
+    items: [PHP, Laravel, MySQL, InfluxDB, ERP integrations]
+  - group: Frontend
+    items: [JavaScript, Vue, jQuery, HTML, CSS]
+  - group: IoT
+    items: [C++ (ESP32), MQTT, LoRa, WebSockets]
+  - group: Platforms & tools
+    items: [OpenCart, Drupal, Git]
+
+beyond:
+  text: In my spare time I build physical computing and IoT projects with micro-controllers like ATmega, STM32, ESP8266 and ESP32. I also enjoy bringing ideas to life through additive (3D printing) and subtractive manufacturing.
+  tags: [IoT, ESP32, STM32, ATmega, 3D printing, CNC]
+
+languages:
+  - name: Greek
+    level: Native
+  - name: English
+    level: Professional
+
+certifications:
+  - name: TensorFlow Developer
+    issuer: DeepLearning.AI
+    year: 2022
+    url: https://www.coursera.org/account/accomplishments/specialization/DQWHAU6934K6
+  - name: Getting Started with Go
+    issuer: Coursera
+    year: 2022
+    url: https://www.coursera.org/account/accomplishments/certificate/HH43L2SXXBE4
+  - name: Git Branches, Merges, and Remotes
+    issuer: LinkedIn Learning
+    year: 2022
+    url: https://www.linkedin.com/learning/certificates/450cde6485acf5a8f8b3be89e45a36cfdabeae57f3756c3601992eaf73c3ef63
+  - name: Git Intermediate Techniques
+    issuer: LinkedIn Learning
+    year: 2022
+    url: https://www.linkedin.com/learning/certificates/3d16df3e26c1bfca53641b71a2d83030ed28a57664b63eca945556865a16a98e
+  - name: Deep Learning Specialization
+    issuer: DeepLearning.AI
+    year: 2019
+    url: https://www.coursera.org/account/accomplishments/specialization/E224TWEJ6HQE
+  - name: Machine Learning
+    issuer: Coursera
+    year: 2019
+    url: https://www.coursera.org/account/accomplishments/verify/QTVWBB2R8NCN
+  - name: Git Essential Training
+    issuer: LinkedIn Learning
+    year: 2019
+    url: https://www.linkedin.com/learning/certificates/4f3981337fe9446a4056466b58b1766fb5dfc3e83b77968b4bbe394029edcc81

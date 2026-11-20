@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@source '../../storage/framework/views/*.php';
+
+/* Dark mode is class-based so the toggle can override the system preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    /* --font-plex / --font-jetbrains are provided by the @fonts directive (see vite.config.js). */
+    --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
+    --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
